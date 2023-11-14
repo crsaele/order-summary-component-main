@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --paleBlue: hsl(255, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(255, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(233, 47%, 23%);
+}
+
+
+body {
+    background: url(images/pattern-background-desktop.svg) no-repeat var(--paleBlue);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+main {
+    max-width: 450px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 20px 0;
+    color: var(--desaturatedBlue);
+}
+
+
+h1, h2 {
+    color: var(--darkBlue);
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+button {
+    display: block;
+    font-family: inherit;
+    margin: 20px auto;
+}
+
+span {
+    color: var(--desaturatedBlue);
+}
+
+
+a:hover {
+    opacity: 0.5;
+}
+
+a:hover, button:hover {
+    cursor: pointer;
+}
+
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+
+.img-container img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.card-details {
+    padding: 7%;
+    text-align: center;
+    height: 430px;
+}
+
+.plan-container {
+    display: flex;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--veryPaleBlue);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.price-container {
+    text-align: left;
+}
+
+.btn-container {
+    margin-top: 40px;
+}
+
+
+#payment-btn {
+    background-color: var(--brightBlue);
+    border-radius: 7px;
+    font-family: inherit;
+    font-weight: 700;
+    border: none;
+    color: #fff;
+    padding: 12px 100px;
+}
+
+#payment-btn:hover {
+    opacity: 0.5;
+}
+
+#cancel-btn {
+    color: var(--desaturatedBlue);
+    font-weight: 700;
+    background-color: #fff;
+    border: none;
+}
+
+#cancel-btn:hover {
+    color: var(--darkBlue);
+}
+
+
+@media only screen and (max-width:425px){
+    body{
+        background: var(--paleBlue) url(images/pattern-background-mobile.svg) no-repeat left top/contain;
+        background-size: contain;
+        font-size: 14px;
+    }
+    main{
+        max-width: 87%;
+    }
+
+}
